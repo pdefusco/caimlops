@@ -43,8 +43,7 @@ from cmlapi.rest import ApiException
 from pprint import pprint
 import json, secrets, os, time
 import mlflow
-from mlops import ModelDeployment
-
+from src.mlops import ModelDeployment
 
 client = cmlapi.default_client()
 client.list_projects()

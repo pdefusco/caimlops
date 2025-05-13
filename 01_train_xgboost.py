@@ -51,18 +51,25 @@ import pyspark.pandas as ps
 
 
 USERNAME = os.environ["PROJECT_OWNER"]
-STORAGE = "s3a://ita-jul-buk-e1ea29ca/data/"
-CONNECTION_NAME = "ita-jul-aw-dl"
+DATALAKE_DIRECTORY = "hdfs://cdpnameservice"
+DBNAME = "TELCO_MLOPS_" + USERNAME
 
 DATE = date.today()
 EXPERIMENT_NAME = "xgb-telco-{0}".format(USERNAME)
 
 mlflow.set_experiment(EXPERIMENT_NAME)
 
-conn = cmldata.get_connection(CONNECTION_NAME)
-spark = conn.get_spark_session()
+spark = (SparkSession.builder.appName("MyApp")\
+  .config("spark.jars", "/opt/spark/optional-lib/iceberg-spark-runtime.jar")\
+  .config("spark.sql.hive.hwc.execution.mode", "spark")\
+  .config("spark.sql.extensions", "com.qubole.spark.hiveacid.HiveAcidAutoConvertExtension, org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions")\
+  .config("spark.sql.catalog.spark_catalog.type", "hive")\
+  .config("spark.sql.catalog.spark_catalog", "org.apache.iceberg.spark.SparkSessionCatalog")\
+  .config("spark.yarn.access.hadoopFileSystems", DATALAKE_DIRECTORY)\
+  .getOrCreate()
+  )
 
-df_from_sql = ps.read_table('SPARK_CATALOG.TELCO_MEDALLION.PRODUCTS_SILVER')
+df_from_sql = ps.read_table("{0}.TELCO_CELL_TOWERS_{1}".format(DBNAME, USERNAME))
 df_from_sql = df_from_sql[["iot_signal_1", "iot_signal_2", "iot_signal_3", "iot_signal_4", "cell_tower_failure"]]
 df = df_from_sql.to_pandas()
 
