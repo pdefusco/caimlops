@@ -47,7 +47,7 @@ from cmlbootstrap import CMLBootstrap
 import seaborn as sns
 import sqlite3
 import cmlapi
-from src.api import ApiUtility
+from caimlops.src.api import ApiUtility
 from pandas import json_normalize
 
 

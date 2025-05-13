@@ -54,11 +54,10 @@ class TelcoDataGen:
 
     '''Class to Generate Telco Cell Tower Data'''
 
-    def __init__(self, username, dbname, storage, connectionName):
+    def __init__(self, username, dbname, datalake_directory):
         self.username = username
-        self.storage = storage
         self.dbname = dbname
-        self.connectionName = connectionName
+        self.datalake_directory = datalake_directory
 
 
     def telcoDataGen(self, spark, shuffle_partitions_requested = 1, partitions_requested = 1, data_rows = 1440):
@@ -90,18 +89,20 @@ class TelcoDataGen:
         return df
 
 
-    def createSparkConnection(self):
+    def createSparkSession(self):
         """
         Method to create a Spark Connection using CML Data Connections
         """
 
-        from pyspark import SparkContext
-        SparkContext.setSystemProperty('spark.executor.cores', '2')
-        SparkContext.setSystemProperty('spark.executor.memory', '4g')
-
-        import cml.data_v1 as cmldata
-        conn = cmldata.get_connection(self.connectionName)
-        spark = conn.get_spark_session()
+        spark = (SparkSession.builder.appName("MyApp")\
+          .config("spark.jars", "/opt/spark/optional-lib/iceberg-spark-runtime.jar")\
+          .config("spark.sql.hive.hwc.execution.mode", "spark")\
+          .config("spark.sql.extensions", "com.qubole.spark.hiveacid.HiveAcidAutoConvertExtension, org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions")\
+          .config("spark.sql.catalog.spark_catalog.type", "hive")\
+          .config("spark.sql.catalog.spark_catalog", "org.apache.iceberg.spark.SparkSessionCatalog")\
+          .config("spark.yarn.access.hadoopFileSystems", self.datalake_directory)\
+          .getOrCreate()
+          )
 
         return spark
 
@@ -170,14 +171,13 @@ def main():
 
     USERNAME = os.environ["PROJECT_OWNER"]
     DBNAME = "TELCO_MLOPS_"+USERNAME
-    STORAGE = "s3a://ita-jul-buk-e1ea29ca/data/"
-    CONNECTION_NAME = "ita-jul-aw-dl"
+    DATALAKE_DIRECTORY = "hdfs://cdpnameservice" #Modify as needed
 
     # Instantiate BankDataGen class
-    dg = TelcoDataGen(USERNAME, DBNAME, STORAGE, CONNECTION_NAME)
+    dg = TelcoDataGen(USERNAME, DBNAME, DATALAKE_DIRECTORY)
 
     # Create CML Spark Connection
-    spark = dg.createSparkConnection()
+    spark = dg.createSparkSession()
 
     # Create Banking Transactions DF
     df = dg.telcoDataGen(spark)

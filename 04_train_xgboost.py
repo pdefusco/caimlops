@@ -51,17 +51,22 @@ import pyspark.pandas as ps
 
 # SET USER VARIABLES
 USERNAME = os.environ["PROJECT_OWNER"]
-DBNAME = "TELCO_MLOPS_"+USERNAME
-STORAGE = "s3a://ita-jul-buk-e1ea29ca/data/"
-CONNECTION_NAME = "ita-jul-aw-dl"
+DATALAKE_DIRECTORY = "hdfs://cdpnameservice" #Modify as needed
+DBNAME = "TELCO_MLOPS_" + USERNAME
 
 # SET MLFLOW EXPERIMENT NAME
 EXPERIMENT_NAME = "xgb-telco-{0}".format(USERNAME)
 mlflow.set_experiment(EXPERIMENT_NAME)
 
-# CREATE SPARK SESSION WITH DATA CONNECTIONS
-conn = cmldata.get_connection(CONNECTION_NAME)
-spark = conn.get_spark_session()
+spark = (SparkSession.builder.appName("MyApp")\
+  .config("spark.jars", "/opt/spark/optional-lib/iceberg-spark-runtime.jar")\
+  .config("spark.sql.hive.hwc.execution.mode", "spark")\
+  .config("spark.sql.extensions", "com.qubole.spark.hiveacid.HiveAcidAutoConvertExtension, org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions")\
+  .config("spark.sql.catalog.spark_catalog.type", "hive")\
+  .config("spark.sql.catalog.spark_catalog", "org.apache.iceberg.spark.SparkSessionCatalog")\
+  .config("spark.yarn.access.hadoopFileSystems", DATALAKE_DIRECTORY)\
+  .getOrCreate()
+  )
 
 # READ LATEST ICEBERG METADATA
 snapshot_id = spark.read.format("iceberg").load('{0}.TELCO_CELL_TOWERS_{1}.snapshots'.format(DBNAME, USERNAME)).select("snapshot_id").tail(1)[0][0]

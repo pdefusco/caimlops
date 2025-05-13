@@ -43,7 +43,7 @@ from cmlapi.rest import ApiException
 from pprint import pprint
 import json, secrets, os, time
 import mlflow
-from mlops import ModelDeployment
+from caimlops.mlops import ModelDeployment
 
 class ModelReDeployment():
     """
@@ -207,9 +207,8 @@ class ModelReDeployment():
         }
 
 USERNAME = os.environ["PROJECT_OWNER"]
-DBNAME = "TELCO_MLOPS_"+USERNAME
-STORAGE = "s3a://ita-jul-buk-e1ea29ca/data/"
-CONNECTION_NAME = "ita-jul-aw-dl"
+DATALAKE_DIRECTORY = "hdfs://cdpnameservice" #Modify as needed
+DBNAME = "TELCO_MLOPS_" + USERNAME
 projectId = os.environ['CDSW_PROJECT_ID']
 
 # SET MLFLOW EXPERIMENT NAME
@@ -240,7 +239,7 @@ cpu = 2
 mem = 4
 replicas = 1
 
-runtimeId = "docker.repository.cloudera.com/cloudera/cdsw/ml-runtime-workbench-python3.9-standard:2024.02.1-b4" #Modify as needed
+runtimeId = "ares-ecs-docker-repo.cloudera-field.org/cloudera/cdsw/ml-runtime-workbench-python3.9-standard:2024.02.1-b4" #Modify as needed
 
 createModelBuildResponse = deployment.createModelBuild(projectId, modelVersionId, modelCreationId, runtimeId, cpu, mem, replicas)
 modelBuildId = createModelBuildResponse.id

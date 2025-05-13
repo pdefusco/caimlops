@@ -51,7 +51,7 @@ import pyspark.pandas as ps
 
 
 USERNAME = os.environ["PROJECT_OWNER"]
-DATALAKE_DIRECTORY = "hdfs://cdpnameservice"
+DATALAKE_DIRECTORY = "hdfs://cdpnameservice" #Modify as needed
 DBNAME = "TELCO_MLOPS_" + USERNAME
 
 DATE = date.today()

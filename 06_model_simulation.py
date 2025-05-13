@@ -47,9 +47,9 @@ from cmlbootstrap import CMLBootstrap
 from pyspark.sql import SparkSession
 from sklearn.metrics import classification_report
 import cmlapi
-from src.api import ApiUtility
+from caimlops.src.api import ApiUtility
 import cml.data_v1 as cmldata
-from utils import TelcoDataGen
+from caimlops.utils import TelcoDataGen
 import datetime
 
 #---------------------------------------------------
@@ -58,15 +58,15 @@ import datetime
 
 # SET USER VARIABLES
 USERNAME = os.environ["PROJECT_OWNER"]
-DBNAME = "TELCO_MLOPS_"+USERNAME
-STORAGE = "s3a://ita-jul-buk-e1ea29ca/data/"
-CONNECTION_NAME = "ita-jul-aw-dl"
+DATALAKE_DIRECTORY = "hdfs://cdpnameservice" #Modify as needed
+DBNAME = "TELCO_MLOPS_" + USERNAME
+projectId = os.environ['CDSW_PROJECT_ID']
 
 # Instantiate BankDataGen class
-dg = TelcoDataGen(USERNAME, DBNAME, STORAGE, CONNECTION_NAME)
+dg = TelcoDataGen(USERNAME, DBNAME, DATALAKE_DIRECTORY)
 
 # Create CML Spark Connection
-spark = dg.createSparkConnection()
+spark = dg.createSparkSession()
 
 # Create Banking Transactions DF
 sparkDf = dg.telcoDataGen(spark)
