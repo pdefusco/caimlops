@@ -48,6 +48,8 @@ from xgboost import XGBClassifier
 from datetime import date
 import cml.data_v1 as cmldata
 import pyspark.pandas as ps
+from pyspark.sql import SparkSession
+
 
 # SET USER VARIABLES
 USERNAME = os.environ["PROJECT_OWNER"]
