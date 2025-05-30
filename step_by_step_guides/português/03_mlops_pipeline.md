@@ -6,9 +6,9 @@ Este documento explica os aspectos mais importantes de 03_newbatch.py, 04_train_
 
 #### Instruções para Execução do Código
 
-Abra 03_newbatch.py, 04_train_xgboost.py e 05_api_redeployment.py na sua sessão CML. Familiarize-se com o código e atualize as variáveis DBNAME, STORAGE e CONNECTION_NAME conforme indicado pelo seu líder HOL.
+Abra 03_newbatch.py, 04_train_xgboost.py e 05_api_redeployment.py na sua sessão Cloudera AI. Familiarize-se com o código e atualize as variáveis DBNAME, STORAGE e CONNECTION_NAME conforme indicado pelo seu líder HOL.
 
-Não execute os scripts individualmente. Crie um trabalho CML para cada um deles. Não execute os trabalhos ainda.
+Não execute os scripts individualmente. Crie um trabalho Cloudera AI para cada um deles. Não execute os trabalhos ainda.
 
 Crie o trabalho "New Batch" com as seguintes configurações:
 
@@ -64,7 +64,7 @@ Depois de criar todos os três trabalhos, acione manualmente o trabalho New Batc
 
 #### Resumo
 
-Neste laboratório, você usou os Trabalhos CML em conjunto com a API CMLv2, Apache Iceberg e MLFlow para orquestrar uma pipeline MLOps mais avançada. Com apenas três scripts e algumas linhas de código, você implementou um processo CI/CD padronizado que adere às melhores práticas MLOps, incluindo reprodutibilidade de dados e modelos, auditabilidade e explicabilidade. Você fez isso utilizando componentes integrados e sem instalações personalizadas.
+Neste laboratório, você usou os Trabalhos Cloudera AI em conjunto com a API Cloudera AI v2, Apache Iceberg e MLFlow para orquestrar uma pipeline MLOps mais avançada. Com apenas três scripts e algumas linhas de código, você implementou um processo CI/CD padronizado que adere às melhores práticas MLOps, incluindo reprodutibilidade de dados e modelos, auditabilidade e explicabilidade. Você fez isso utilizando componentes integrados e sem instalações personalizadas.
 
 * No primeiro trabalho, um novo lote de dados é adicionado à tabela Iceberg Credit Card Transaction.
 
@@ -74,5 +74,5 @@ Neste laboratório, você usou os Trabalhos CML em conjunto com a API CMLv2, Apa
 
 #### Artigos Relacionados
 
-* Para saber mais sobre Trabalhos CML:
-  * [Criar um Trabalho CML](https://docs.cloudera.com/machine-learning/cloud/jobs-pipelines/topics/ml-creating-a-job-c.html)
+* Para saber mais sobre Trabalhos Cloudera AI:
+  * [Criar um Trabalho Cloudera AI](https://docs.cloudera.com/machine-learning/cloud/jobs-pipelines/topics/ml-creating-a-job-c.html)

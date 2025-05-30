@@ -2,23 +2,23 @@
 
 ### Objective
 
-This document provides instructions for setting up the HOL in your CML Workspace.
+This document provides instructions for setting up the HOL in your Cloudera AI Workspace.
 
 ### Requirements
 
-* CML Workspace on version xxx with instance types xxx
-* CML MLFlow Registry
-* CDP User with CML Admin rights and full setup in IDBroker Mappings and Ranger Hadoop SQL / RAZ-related Policies.
-* CML Runtime Resource Profile of 2 vCPU and 4 or 8 GiB
+* Cloudera AI Workspace on version xxx with instance types xxx
+* Cloudera AI MLFlow Registry
+* Cloudera User with Cloudera AI Admin rights and full setup in IDBroker Mappings and Ranger Hadoop SQL / RAZ-related Policies.
+* Cloudera AI Runtime Resource Profile of 2 vCPU and 4 or 8 GiB
 
 ### Setup Instructions
 
-1. Deploy CML Project from Git Repository
-2. Create a CML Session and Install Requirements
+1. Deploy Cloudera AI Project from Git Repository
+2. Create a Cloudera AI Session and Install Requirements
 
-#### 1. Deploy CML Project from Git Repository
+#### 1. Deploy Cloudera AI Project from Git Repository
 
-From inside the CML Workspace create a new project and enter the following parameters in the form:
+From inside the Cloudera AI Workspace create a new project and enter the following parameters in the form:
 
 ```
 Project Name: MLOps HOL <username>
@@ -34,9 +34,9 @@ Runtimes:
 
 ![alt text](../../img/holbnk2.png)
 
-#### 2. Create a CML Session and Install Requirements
+#### 2. Create a Cloudera AI Session and Install Requirements
 
-Launch a CML Session with:
+Launch a Cloudera AI Session with:
 
 ```
 Editor: Workbench

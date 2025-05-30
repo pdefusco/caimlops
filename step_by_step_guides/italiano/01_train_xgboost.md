@@ -6,13 +6,13 @@ Questo documento spiega gli aspetti più importanti di 01_train_xgboost.py.
 
 #### Istruzioni per l'esecuzione del codice
 
-Apri 01_train_xgboost.py nella tua sessione CML e aggiorna le variabili DBNAME, STORAGE e CONNECTION_NAME alle righe 60-62 come indicato dal tuo responsabile HOL.
+Apri 01_train_xgboost.py nella tua sessione Cloudera AI e aggiorna le variabili DBNAME, STORAGE e CONNECTION_NAME alle righe 60-62 come indicato dal tuo responsabile HOL.
 
 Successivamente, premi il pulsante di riproduzione per eseguire l'intero script. Sarai in grado di osservare l'output del codice sul lato destro dello schermo.
 
 Vai alla scheda Esperimenti MLFLow e convalida la creazione dell'esperimento. Apri l'Esecuzione dell'Esperimento e familiarizzati con i metadati dell'esecuzione dell'esperimento. In fondo alla pagina, apri la cartella Artifacts e nota che le dipendenze del modello sono state tracciate.
 
-Poi, torna alla sessione CML e modifica il codice:
+Poi, torna alla sessione Cloudera AI e modifica il codice:
 
 * Alla riga 74, sostituisci la seguente riga di codice:
 
@@ -36,7 +36,7 @@ Esegui lo script. Poi torna alla pagina degli Esperimenti MLFLow e convalida la 
 
 #### Punti salienti del codice
 
-* Riga 41: il pacchetto MLFlow è importato. MLFlow è installato di default nei progetti CML. Un plugin interno traduce i metodi MLFlow in metodi dell'API CML. Non è necessario installare o configurare MLFlow per utilizzare le sue capacità di tracciamento.
+* Riga 41: il pacchetto MLFlow è importato. MLFlow è installato di default nei progetti Cloudera AI. Un plugin interno traduce i metodi MLFlow in metodi dell'API Cloudera AI. Non è necessario installare o configurare MLFlow per utilizzare le sue capacità di tracciamento.
 
 * Righe 72 - 100: il codice di addestramento XGBoost è definito nel contesto di un'Esecuzione di Esperimento MLFlow. Il codice XGBoost rimane invariato. Il metodo "mlflow.log_param()" è utilizzato per registrare le metriche del modello. Il metodo "mlflow.log_model()" è utilizzato per tracciare gli artefatti del modello nella cartella "artifacts".
 
@@ -48,17 +48,17 @@ In questo laboratorio, hai utilizzato MLFlow per tracciare le esecuzioni degli e
 
 Il Registro è un componente separato dallo spazio di lavoro e funge da ambiente di staging per spostare eventualmente modelli e dipendenze associate da uno spazio di lavoro a un altro, ad esempio in uno schema DEV a QA a PRD.
 
-MLFlow in CML non richiede alcuna installazione o configurazione da parte degli amministratori o degli utenti CML. È preinstallato di default in ogni spazio di lavoro CML. CML include un plugin speciale che traduce le chiamate API MLFlow in routine dell'API CML v2. Imparerai di più sull'API CML v2 nella sezione successiva.
+MLFlow in Cloudera AI non richiede alcuna installazione o configurazione da parte degli amministratori o degli utenti Cloudera AI. È preinstallato di default in ogni spazio di lavoro Cloudera AI. Cloudera AI include un plugin speciale che traduce le chiamate API MLFlow in routine dell'API Cloudera AI v2. Imparerai di più sull'API Cloudera AI v2 nella sezione successiva.
 
 #### Articoli Correlati
 
 * Per saperne di più su MLFlow:
   * [Documentazione MLFlow](https://mlflow.org/docs/latest/index.html)
-  * [Registrazione di un modello nell'interfaccia utente MLFlow CML](https://docs.cloudera.com/machine-learning/1.5.4/models/topics/ml-registering-model-using-ui.html)
-  * [Documentazione MLFlow CML](https://docs.cloudera.com/machine-learning/cloud/experiments/topics/ml-experiments-v2.html)
-  * [Ottimizzazione degli iperparametri con le esperienze su CML](https://community.cloudera.com/t5/Community-Articles/Tuning-Hyperparameters-with-Experiments-feature-on-Cloudera/ta-p/368654)
+  * [Registrazione di un modello nell'interfaccia utente MLFlow Cloudera AI](https://docs.cloudera.com/machine-learning/1.5.4/models/topics/ml-registering-model-using-ui.html)
+  * [Documentazione MLFlow Cloudera AI](https://docs.cloudera.com/machine-learning/cloud/experiments/topics/ml-experiments-v2.html)
+  * [Ottimizzazione degli iperparametri con le esperienze su Cloudera AI](https://community.cloudera.com/t5/Community-Articles/Tuning-Hyperparameters-with-Experiments-feature-on-Cloudera/ta-p/368654)
 
 * Per saperne di più su XGBoost:
   * [Documentazione XGboost](https://xgboost.readthedocs.io/en/stable/)
-  * [XGBoost distribuito con PySpark in CML](https://community.cloudera.com/t5/Community-Articles/Distributed-XGBoost-with-PySpark-in-Cloudera-Machine/ta-p/375810)
-  * [XGBoost CML con Dask AMP](https://github.com/cloudera/CML_AMP_Dask_on_CML)
+  * [XGBoost distribuito con PySpark in Cloudera AI](https://community.cloudera.com/t5/Community-Articles/Distributed-XGBoost-with-PySpark-in-Cloudera-Machine/ta-p/375810)
+  * [XGBoost Cloudera AI con Dask AMP](https://github.com/cloudera/CML_AMP_Dask_on_CML)

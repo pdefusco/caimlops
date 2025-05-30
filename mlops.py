@@ -38,7 +38,7 @@
 #***************************************************************************/
 
 """
-Utils to manage deployment of XGBoost classifier in CML
+Utils to manage deployment of XGBoost classifier in Cloudera AI
 """
 from __future__ import print_function
 from pprint import pprint

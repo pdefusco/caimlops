@@ -107,7 +107,7 @@ class TelcoDataGen:
 
     def createSparkSession(self):
         """
-        Method to create a Spark Connection using CML Data Connections
+        Method to create a Spark Connection using Cloudera AI Data Connections
         """
 
         spark = (SparkSession.builder.appName("MyApp")\
@@ -150,7 +150,7 @@ class TelcoDataGen:
         """
         Method to create or append data to the IOT DEVICES FLEET table
         The table is used to simulate batches of new data
-        The table is meant to be updated periodically as part of a CML Job
+        The table is meant to be updated periodically as part of a Cloudera AI Job
         """
 
         try:

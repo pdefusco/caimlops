@@ -62,7 +62,7 @@ if not logger.handlers:
 
 
 class ApiUtility:
-    """A utility class for working with CML API_v2
+    """A utility class for working with Cloudera AI API_v2
     This class contains methods that wrap API_v2 to achieve specific
     needs that facilitate the simulation.
     Attributes:
@@ -132,7 +132,7 @@ class ApiUtility:
 
     def get_latest_standard_runtime(self):
         """
-        Use CML APIv2 to identify and return the latest version of a Python 3.6,
+        Use Cloudera AI APIv2 to identify and return the latest version of a Python 3.6,
         Standard, Workbench Runtime
         """
 
@@ -159,7 +159,7 @@ class ApiUtility:
 
     def deploy_monitoring_application(self, application_name):
         """
-        Use CML APIv2 to create and deploy an application to serve the Evidently
+        Use Cloudera AI APIv2 to create and deploy an application to serve the Evidently
         monitoring reports via a Flask application.
         Utilize a runtime if available, else use legacy Python3 engine.
         """
@@ -194,7 +194,7 @@ class ApiUtility:
 
     def restart_running_application(self, application_name):
         """
-        Use CML APIv2 to restart a running application provided the application name.
+        Use Cloudera AI APIv2 to restart a running application provided the application name.
         """
 
         search_criteria = {"name": application_name}

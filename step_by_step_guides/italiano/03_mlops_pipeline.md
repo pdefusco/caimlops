@@ -6,9 +6,9 @@ Questo documento spiega gli aspetti più importanti di 03_newbatch.py, 04_train_
 
 #### Istruzioni per l'esecuzione del codice
 
-Apri 03_newbatch.py, 04_train_xgboost.py e 05_api_redeployment.py nella tua sessione CML. Familiarizzati con il codice e aggiorna le variabili DBNAME, STORAGE e CONNECTION_NAME come indicato dal tuo responsabile HOL.
+Apri 03_newbatch.py, 04_train_xgboost.py e 05_api_redeployment.py nella tua sessione Cloudera AI. Familiarizzati con il codice e aggiorna le variabili DBNAME, STORAGE e CONNECTION_NAME come indicato dal tuo responsabile HOL.
 
-Non eseguire i script individualmente. Crea invece un lavoro CML per ciascuno di essi. Non eseguire ancora i lavori.
+Non eseguire i script individualmente. Crea invece un lavoro Cloudera AI per ciascuno di essi. Non eseguire ancora i lavori.
 
 Crea il lavoro "New Batch" con le seguenti configurazioni:
 
@@ -64,7 +64,7 @@ Una volta creati tutti e tre i lavori, avvia manualmente il lavoro New Batch. Mo
 
 #### Riepilogo
 
-In questo laboratorio, hai utilizzato i lavori CML in combinazione con l'API CMLv2, Apache Iceberg e MLFlow per orchestrare un pipeline MLOps più avanzato. Con solo tre script e poche righe di codice, hai implementato un processo CI/CD standardizzato che aderisca alle migliori pratiche MLOps, inclusa la riproducibilità dei dati e dei modelli, l'auditabilità e l'esplicitabilità. Hai fatto ciò utilizzando componenti integrati e senza installazioni personalizzate.
+In questo laboratorio, hai utilizzato i lavori Cloudera AI in combinazione con l'API Cloudera AI v2, Apache Iceberg e MLFlow per orchestrare un pipeline MLOps più avanzato. Con solo tre script e poche righe di codice, hai implementato un processo CI/CD standardizzato che aderisca alle migliori pratiche MLOps, inclusa la riproducibilità dei dati e dei modelli, l'auditabilità e l'esplicitabilità. Hai fatto ciò utilizzando componenti integrati e senza installazioni personalizzate.
 
 * Nel primo lavoro, un nuovo batch di dati viene aggiunto alla tabella Iceberg Credit Card Transaction.
 
@@ -74,5 +74,5 @@ In questo laboratorio, hai utilizzato i lavori CML in combinazione con l'API CML
 
 #### Articoli Correlati
 
-* Per saperne di più sui lavori CML:
-  * [Creare un lavoro CML](https://docs.cloudera.com/machine-learning/cloud/jobs-pipelines/topics/ml-creating-a-job-c.html)
+* Per saperne di più sui lavori Cloudera AI:
+  * [Creare un lavoro Cloudera AI](https://docs.cloudera.com/machine-learning/cloud/jobs-pipelines/topics/ml-creating-a-job-c.html)
