@@ -44,7 +44,7 @@ Run the script. Then return to the MLFLow Experiments page and validate the new 
 
 #### Summary
 
-In this welab used MLFlow to track experiment runs in the Experiments UI, access experiment run data programmatically via the MLFlow Client, and register Runs to the MLFlow Registry. When an Experiment Run is tracked, MLFlow automatically stores model artifacts and dependencies in the backend.  
+In this lab you used MLFlow to track experiment runs in the Experiments UI, access experiment run data programmatically via the MLFlow Client, and register Runs to the MLFlow Registry. When an Experiment Run is tracked, MLFlow automatically stores model artifacts and dependencies in the backend.  
 
 The Registry is a separate component from the Workspace and acts as a staging environment for optionally moving models and associated dependencies from one Workspace to another, for example in a DEV to QA to PRD pattern.  
 
