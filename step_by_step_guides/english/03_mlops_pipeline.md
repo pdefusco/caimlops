@@ -6,9 +6,9 @@ This document explains the most important aspects of 03_newbatch.py, 04_train_xg
 
 #### Instructions for Code Execution
 
-Open 03_newbatch.py, 04_train_xgboost.py and 05_api_redeployment.py in your CML Session. Familiarize yourself with the code and update the DBNAME, STORAGE, and CONNECTION_NAME variables as instructed by your HOL Lead.
+Open 03_newbatch.py, 04_train_xgboost.py and 05_api_redeployment.py in your Cloudera AI Session. Familiarize yourself with the code and update the DBNAME, STORAGE, and CONNECTION_NAME variables as instructed by your HOL Lead.
 
-Do not run the scripts individually. Create a CML Job for each instead. Do not run the jobs yet.
+Do not run the scripts individually. Create a Cloudera AI Job for each instead. Do not run the jobs yet.
 
 Create Job "New Batch" with the following configurations:
 
@@ -64,7 +64,7 @@ Once you created all three jobs, manually trigger the New Batch job. Monitor exe
 
 #### Summary
 
-In this lab you used CML Jobs in tandem with CML APIv2, Apache Iceberg, and MLFlow in order to orchestrate a more advanced MLOps pipeline. With just three scripts and a few lines of code, you've implemented a standardized CI/CD Process that adhers to MLOps Best Practices including data and model reproducibility, auditability, explainability. You did this leveraging built-in components and without any custom installations.
+In this lab you used Cloudera AI Jobs in tandem with Cloudera AI APIv2, Apache Iceberg, and MLFlow in order to orchestrate a more advanced MLOps pipeline. With just three scripts and a few lines of code, you've implemented a standardized CI/CD Process that adhers to MLOps Best Practices including data and model reproducibility, auditability, explainability. You did this leveraging built-in components and without any custom installations.
 
 * In the first job, a new data batch is appended to the Iceberg Credit Card Transaction table.
 
@@ -74,5 +74,5 @@ In this lab you used CML Jobs in tandem with CML APIv2, Apache Iceberg, and MLFl
 
 #### Related Articles
 
-* To learn more about CML Jobs:
-  * [Creating a CML Job](https://docs.cloudera.com/machine-learning/cloud/jobs-pipelines/topics/ml-creating-a-job-c.html)
+* To learn more about Cloudera AI Jobs:
+  * [Creating a Cloudera AI Job](https://docs.cloudera.com/machine-learning/cloud/jobs-pipelines/topics/ml-creating-a-job-c.html)

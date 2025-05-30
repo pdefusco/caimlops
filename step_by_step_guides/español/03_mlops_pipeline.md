@@ -6,9 +6,9 @@ Este documento explica los aspectos más importantes de 03_newbatch.py, 04_train
 
 #### Instrucciones para la Ejecución del Código
 
-Abre 03_newbatch.py, 04_train_xgboost.py y 05_api_redeployment.py en tu sesión de CML. Familiarízate con el código y actualiza las variables DBNAME, STORAGE y CONNECTION_NAME según las instrucciones de tu líder de HOL.
+Abre 03_newbatch.py, 04_train_xgboost.py y 05_api_redeployment.py en tu sesión de Cloudera AI. Familiarízate con el código y actualiza las variables DBNAME, STORAGE y CONNECTION_NAME según las instrucciones de tu líder de HOL.
 
-No ejecutes los scripts individualmente. Crea un Trabajo de CML para cada uno en su lugar. No ejecutes los trabajos aún.
+No ejecutes los scripts individualmente. Crea un Trabajo de Cloudera AI para cada uno en su lugar. No ejecutes los trabajos aún.
 
 Crea el Trabajo "New Batch" con las siguientes configuraciones:
 
@@ -64,7 +64,7 @@ Una vez que hayas creado los tres trabajos, activa manualmente el trabajo New Ba
 
 #### Resumen
 
-En este laboratorio usaste Trabajos de CML junto con la APIv2 de CML, Apache Iceberg y MLFlow para orquestar un pipeline de MLOps más avanzado. Con solo tres scripts y unas pocas líneas de código, has implementado un Proceso CI/CD estandarizado que adhiere a las Mejores Prácticas de MLOps, incluyendo reproducibilidad de datos y modelos, auditabilidad y explicabilidad. Hiciste esto aprovechando los componentes integrados y sin instalaciones personalizadas.
+En este laboratorio usaste Trabajos de Cloudera AI junto con la APIv2 de Cloudera AI, Apache Iceberg y MLFlow para orquestar un pipeline de MLOps más avanzado. Con solo tres scripts y unas pocas líneas de código, has implementado un Proceso CI/CD estandarizado que adhiere a las Mejores Prácticas de MLOps, incluyendo reproducibilidad de datos y modelos, auditabilidad y explicabilidad. Hiciste esto aprovechando los componentes integrados y sin instalaciones personalizadas.
 
 * En el primer trabajo, se añade un nuevo lote de datos a la tabla de Transacciones con Tarjeta de Crédito de Iceberg.
 
@@ -74,5 +74,5 @@ En este laboratorio usaste Trabajos de CML junto con la APIv2 de CML, Apache Ice
 
 #### Artículos Relacionados
 
-* Para aprender más sobre Trabajos de CML:
-  * [Creación de un Job en CML](https://docs.cloudera.com/machine-learning/cloud/jobs-pipelines/topics/ml-creating-a-job-c.html)
+* Para aprender más sobre Trabajos de Cloudera AI:
+  * [Creación de un Job en Cloudera AI](https://docs.cloudera.com/machine-learning/cloud/jobs-pipelines/topics/ml-creating-a-job-c.html)

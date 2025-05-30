@@ -6,9 +6,9 @@ Ce document explique les aspects les plus importants de 03_newbatch.py, 04_train
 
 #### Instructions pour l'exécution du code
 
-Ouvrez 03_newbatch.py, 04_train_xgboost.py et 05_api_redeployment.py dans votre session CML. Familiarisez-vous avec le code et mettez à jour les variables DBNAME, STORAGE et CONNECTION_NAME comme indiqué par votre responsable HOL.
+Ouvrez 03_newbatch.py, 04_train_xgboost.py et 05_api_redeployment.py dans votre session Cloudera AI. Familiarisez-vous avec le code et mettez à jour les variables DBNAME, STORAGE et CONNECTION_NAME comme indiqué par votre responsable HOL.
 
-Ne lancez pas les scripts individuellement. Créez plutôt un travail CML pour chacun d'eux. Ne lancez pas encore les travaux.
+Ne lancez pas les scripts individuellement. Créez plutôt un travail Cloudera AI pour chacun d'eux. Ne lancez pas encore les travaux.
 
 Créez le travail "New Batch" avec les configurations suivantes :
 
@@ -64,7 +64,7 @@ Une fois que vous avez créé les trois travaux, déclenchez manuellement le tra
 
 #### Résumé
 
-Dans ce laboratoire, vous avez utilisé les travaux CML en tandem avec l'API CMLv2, Apache Iceberg et MLFlow afin d'orchestrer un pipeline MLOps plus avancé. Avec seulement trois scripts et quelques lignes de code, vous avez mis en œuvre un processus CI/CD standardisé qui adhère aux meilleures pratiques MLOps, y compris la reproductibilité des données et des modèles, l'auditabilité et l'explicabilité. Vous avez réalisé cela en utilisant des composants intégrés et sans installations personnalisées.
+Dans ce laboratoire, vous avez utilisé les travaux Cloudera AI en tandem avec l'API Cloudera AI v2, Apache Iceberg et MLFlow afin d'orchestrer un pipeline MLOps plus avancé. Avec seulement trois scripts et quelques lignes de code, vous avez mis en œuvre un processus CI/CD standardisé qui adhère aux meilleures pratiques MLOps, y compris la reproductibilité des données et des modèles, l'auditabilité et l'explicabilité. Vous avez réalisé cela en utilisant des composants intégrés et sans installations personnalisées.
 
 * Dans le premier travail, un nouveau lot de données est ajouté à la table Iceberg Credit Card Transaction.
 
@@ -74,5 +74,5 @@ Dans ce laboratoire, vous avez utilisé les travaux CML en tandem avec l'API CML
 
 #### Articles Connexes
 
-* Pour en savoir plus sur les travaux CML :
-  * [Créer un travail CML](https://docs.cloudera.com/machine-learning/cloud/jobs-pipelines/topics/ml-creating-a-job-c.html)
+* Pour en savoir plus sur les travaux Cloudera AI :
+  * [Créer un travail Cloudera AI](https://docs.cloudera.com/machine-learning/cloud/jobs-pipelines/topics/ml-creating-a-job-c.html)

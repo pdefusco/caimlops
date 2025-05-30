@@ -65,7 +65,7 @@ projectId = os.environ['CDSW_PROJECT_ID']
 # Instantiate BankDataGen class
 dg = TelcoDataGen(USERNAME, DBNAME, DATALAKE_DIRECTORY)
 
-# Create CML Spark Connection
+# Create Cloudera AI Spark Connection
 spark = dg.createSparkSession()
 
 # Create Banking Transactions DF

@@ -2,23 +2,23 @@
 
 ### Objetivo
 
-Este documento fornece instruções para configurar o HOL em seu espaço de trabalho CML.
+Este documento fornece instruções para configurar o HOL em seu espaço de trabalho Cloudera AI.
 
 ### Requisitos
 
-* Espaço de trabalho CML na versão xxx com tipos de instância xxx
-* Registro MLFlow CML
-* Usuário CDP com direitos de administrador CML e configuração completa em Mappings IDBroker e Políticas Hadoop SQL / RAZ do Ranger.
-* Perfil de recursos runtime CML de 2 vCPU e 4 ou 8 GiB
+* Espaço de trabalho Cloudera AI na versão xxx com tipos de instância xxx
+* Registro MLFlow Cloudera AI
+* Usuário Cloudera com direitos de administrador Cloudera AI e configuração completa em Mappings IDBroker e Políticas Hadoop SQL / RAZ do Ranger.
+* Perfil de recursos runtime Cloudera AI de 2 vCPU e 4 ou 8 GiB
 
 ### Instruções de Configuração
 
-1. Desdobre o Projeto CML do Repositório Git
-2. Crie uma Sessão CML e Instale os Requisitos
+1. Desdobre o Projeto Cloudera AI do Repositório Git
+2. Crie uma Sessão Cloudera AI e Instale os Requisitos
 
-#### 1. Desdobrar o Projeto CML do Repositório Git
+#### 1. Desdobrar o Projeto Cloudera AI do Repositório Git
 
-Dentro do espaço de trabalho CML, crie um novo projeto e insira os seguintes parâmetros no formulário:
+Dentro do espaço de trabalho Cloudera AI, crie um novo projeto e insira os seguintes parâmetros no formulário:
 
 ```
 Nome do Projeto: MLOps HOL <username>
@@ -34,9 +34,9 @@ Runtimes :
 
 ![alt text](../../img/holbnk2.png)
 
-#### 2. Crie uma Sessão CML e Instale os Requisitos
+#### 2. Crie uma Sessão Cloudera AI e Instale os Requisitos
 
-Inicie uma sessão CML com:
+Inicie uma sessão Cloudera AI com:
 
 ```
 Editor: Workbench
