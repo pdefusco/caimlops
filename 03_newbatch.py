@@ -164,7 +164,7 @@ class TelcoDataGen:
         Method to validate creation of table
         """
         print("SHOW TABLES FROM '{}'".format(self.dbname))
-        spark.sql("SHOW TABLES FROM {}".format(self.dbname)).show()
+        spark.sql("SHOW TABLES FROM {}".format(self.dbname)).show(truncate=False)
 
 
 def main():
