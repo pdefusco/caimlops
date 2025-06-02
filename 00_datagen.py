@@ -135,6 +135,16 @@ class TelcoDataGen:
         spark.sql("SHOW DATABASES LIKE '{}'".format(self.dbname)).show()
 
 
+    def deleteTableAndDatabase(self, spark):
+        """
+        Method to delete database and table
+        """
+        spark.sql("DROP TABLE IF EXISTS {0}.TELCO_CELL_TOWERS_{1}".format(self.dbname, self.username))
+        spark.sql("DROP DATABASE IF EXISTS {} ".format(self.dbname))
+
+        return spark
+
+
     def createOrReplace(self, df):
         """
         Method to create or append data to the TELCO_CELL_TOWERS table
@@ -174,6 +184,9 @@ def main():
     # Create Banking Transactions DF
     df = dg.telcoDataGen(spark)
     df = dg.addCorrelatedColumn(df)
+
+    # Delete Database if exists
+    dg.deleteTableAndDatabase(spark)
 
     # Create Spark Database
     dg.createDatabase(spark)
