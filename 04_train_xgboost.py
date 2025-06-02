@@ -52,7 +52,7 @@ from pyspark.sql import SparkSession
 
 # SET USER VARIABLES
 USERNAME = os.environ["PROJECT_OWNER"]
-DATALAKE_DIRECTORY = "hdfs://namespace1" #Modify as needed
+DATALAKE_DIRECTORY = "hdfs://nameservice1" #Modify as needed
 DBNAME = "TELCO_MLOPS_" + USERNAME
 
 # SET MLFLOW EXPERIMENT NAME

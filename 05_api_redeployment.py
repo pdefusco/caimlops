@@ -207,7 +207,7 @@ class ModelReDeployment():
         }
 
 USERNAME = os.environ["PROJECT_OWNER"]
-DATALAKE_DIRECTORY = "hdfs://namespace1" #Modify as needed
+DATALAKE_DIRECTORY = "hdfs://nameservice1" #Modify as needed
 DBNAME = "TELCO_MLOPS_" + USERNAME
 projectId = os.environ['CDSW_PROJECT_ID']
 

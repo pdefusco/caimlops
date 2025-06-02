@@ -85,7 +85,7 @@ def main():
 
     USERNAME = os.environ["PROJECT_OWNER"]
     DBNAME = "TELCO_MLOPS_"+USERNAME
-    DATALAKE_DIRECTORY = "hdfs://cdpnameservice" #Modify as needed
+    DATALAKE_DIRECTORY = "hdfs://nameservice1" #Modify as needed
 
     # Instantiate BankDataGen class
     dg = TelcoDataGen(USERNAME, DBNAME, DATALAKE_DIRECTORY)
