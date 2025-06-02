@@ -48,7 +48,7 @@ Cloudera AI covers the end-to-end machine learning workflow, enabling fully isol
 
 * Applications deliver interactive experiences for business users in a matter of clicks. Frameworks such as Flask and Shiny can be used in development of these Applications, while Cloudera Data Visualization is also available as a point-and-click interface for building these experiences.
 
-![alt text](img/CMLarch.png)
+![alt text](img/cmlarch.png)
 
 
 ### Cloudera Data Platform (CDP)
@@ -65,4 +65,4 @@ The data platform from Cloudera provides self-service access to integrated, mult
 
 * Aligned Practices across Environments: implementing common and consistent practices for the management of multiple cloud environments result in lower operational costs and enhanced security practices.
 
-![alt text](img/CMLplatform.png)
+![alt text](img/cmlplatform.png)
