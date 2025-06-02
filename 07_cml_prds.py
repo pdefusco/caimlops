@@ -37,7 +37,6 @@
 # #  Author(s): Paul de Fusco
 #***************************************************************************/
 
-
 import cdsw, time, os
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -47,7 +46,7 @@ from cmlbootstrap import CMLBootstrap
 import seaborn as sns
 import sqlite3
 import cmlapi
-from caimlops.src.api import ApiUtility
+from src.api import ApiUtility
 from pandas import json_normalize
 
 

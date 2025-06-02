@@ -43,7 +43,7 @@ from cmlapi.rest import ApiException
 from pprint import pprint
 import json, secrets, os, time
 import mlflow
-from caimlops.mlops import ModelDeployment
+from mlops import ModelDeployment
 
 client = cmlapi.default_client()
 client.list_projects()
@@ -75,7 +75,7 @@ registeredModelResponse.model_versions[0].model_version_id
 createModelResponse = deployment.createModel(projectId, modelName, modelId)
 modelCreationId = createModelResponse.id
 
-runtimeId = "ares-ecs-docker-repo.cloudera-field.org/cloudera/cdsw/ml-runtime-workbench-python3.9-standard:2024.02.1-b4" #Modify as needed
+runtimeId = "docker.repo.oned.t-mobile.com/cloudera/cdsw/ml-runtime-workbench-python3.9-standard:2024.10.1-b12" #Modify as needed
 
 createModelBuildResponse = deployment.createModelBuild(projectId, modelVersionId, modelCreationId, runtimeId)
 modelBuildId = createModelBuildResponse.id

@@ -50,10 +50,9 @@ import cml.data_v1 as cmldata
 import pyspark.pandas as ps
 from pyspark.sql import SparkSession
 
-
 # SET USER VARIABLES
 USERNAME = os.environ["PROJECT_OWNER"]
-DATALAKE_DIRECTORY = "hdfs://cdpnameservice" #Modify as needed
+DATALAKE_DIRECTORY = "hdfs://namespace1" #Modify as needed
 DBNAME = "TELCO_MLOPS_" + USERNAME
 
 # SET MLFLOW EXPERIMENT NAME

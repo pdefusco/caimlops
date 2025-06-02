@@ -47,9 +47,9 @@ from cmlbootstrap import CMLBootstrap
 from pyspark.sql import SparkSession
 from sklearn.metrics import classification_report
 import cmlapi
-from caimlops.src.api import ApiUtility
+from src.api import ApiUtility
 import cml.data_v1 as cmldata
-from caimlops.utils import TelcoDataGen
+from utils import TelcoDataGen
 import datetime
 
 #---------------------------------------------------
@@ -58,7 +58,7 @@ import datetime
 
 # SET USER VARIABLES
 USERNAME = os.environ["PROJECT_OWNER"]
-DATALAKE_DIRECTORY = "hdfs://cdpnameservice" #Modify as needed
+DATALAKE_DIRECTORY = "hdfs://namespace1" #Modify as needed
 DBNAME = "TELCO_MLOPS_" + USERNAME
 projectId = os.environ['CDSW_PROJECT_ID']
 
