@@ -132,7 +132,7 @@ class TelcoDataGen:
         spark.sql("CREATE DATABASE IF NOT EXISTS {}".format(self.dbname))
 
         print("SHOW DATABASES LIKE '{}'".format(self.dbname))
-        spark.sql("SHOW DATABASES LIKE '{}'".format(self.dbname)).show()
+        spark.sql("SHOW DATABASES LIKE '{}'".format(self.dbname)).show(truncate=False)
 
 
     def deleteTableAndDatabase(self, spark):
