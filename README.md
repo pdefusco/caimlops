@@ -1,42 +1,42 @@
-# CML MLops Telco MLFlow
+# CAI MLops Telco with MLFlow
 
-Cloudera Machine Learning (CML) is Cloudera’s cloud-native machine learning platform built for CDP. Cloudera Machine Learning unifies self-service data science and data engineering in a single, portable service as part of an enterprise data cloud for multi-function analytics on data anywhere.
+Cloudera Machine Learning (CAI) is Cloudera’s cloud-native machine learning platform built for CDP. Cloudera Machine Learning unifies self-service data science and data engineering in a single, portable service as part of an enterprise data cloud for multi-function analytics on data anywhere.
 
 It empowers organizations to build and deploy machine learning and AI capabilities for business at scale, efficiently and securely, anywhere they want. It’s built for the agility and power of cloud computing, but isn’t limited to any one cloud provider or data source.
 
 
-### CML at a Glance
+### CAI at a Glance
 
-CML is a comprehensive platform to collaboratively build and deploy machine learning capabilities at scale.
+CAI is a comprehensive platform to collaboratively build and deploy machine learning capabilities at scale.
 
 Cloudera Machine Learning provides benefits for each type of user.
 
 ##### Data Scientists
 
-* CML Enables DS teams to collaborate and speed model development and delivery with transparent, secure, and governed workflows
+* CAI Enables DS teams to collaborate and speed model development and delivery with transparent, secure, and governed workflows
 
-* With CML, DS teams can expand AI use cases with automated ML pipelines and an integrated and complete production ML toolkit
+* With CAI, DS teams can expand AI use cases with automated ML pipelines and an integrated and complete production ML toolkit
 
-* CML enables faster decision making and trust with end-to-end visibility and auditability of data, processes, models, and dashboards
+* CAI enables faster decision making and trust with end-to-end visibility and auditability of data, processes, models, and dashboards
 
 ##### IT Teams
 
-* CML increases DS productivity with visibility, security, and governance of the complete ML lifecycle
+* CAI increases DS productivity with visibility, security, and governance of the complete ML lifecycle
 
 * It eliminate silos, blindspots, and the need to move/duplicate data with a fully integrated platform across the data lifecycle.
 
-* CML accelerates AI with self-service access and containerized ML workspaces that remove the heavy lifting and get models to production faster
+* CAI accelerates AI with self-service access and containerized ML workspaces that remove the heavy lifting and get models to production faster
 
 ##### Business Users
 
-* CML provides access to interactive Applications built and deployed by DS teams.
+* CAI provides access to interactive Applications built and deployed by DS teams.
 
 * Analysts are empowered with predictive insights to more intelligently make business decisions.
 
 
-### CML Key Capabilities
+### CAI Key Capabilities
 
-Cloudera Machine Learning covers the end-to-end machine learning workflow, enabling fully isolated and containerized workloads - including Python, R, and Spark-on-Kubernetes - for scale-out data engineering and machine learning with seamless distributed dependency management.
+Cloudera AI covers the end-to-end machine learning workflow, enabling fully isolated and containerized workloads - including Python, R, and Spark-on-Kubernetes - for scale-out data engineering and machine learning with seamless distributed dependency management.
 
 * Sessions enable Data Scientists to directly leverage the CPU, memory, and GPU compute available across the workspace, while also being directly connected to the data in the data lake.
 
@@ -48,7 +48,7 @@ Cloudera Machine Learning covers the end-to-end machine learning workflow, enabl
 
 * Applications deliver interactive experiences for business users in a matter of clicks. Frameworks such as Flask and Shiny can be used in development of these Applications, while Cloudera Data Visualization is also available as a point-and-click interface for building these experiences.
 
-![alt text](img/cmlarch.png)
+![alt text](img/CAIarch.png)
 
 
 ### Cloudera Data Platform (CDP)
@@ -65,4 +65,4 @@ The data platform from Cloudera provides self-service access to integrated, mult
 
 * Aligned Practices across Environments: implementing common and consistent practices for the management of multiple cloud environments result in lower operational costs and enhanced security practices.
 
-![alt text](img/cmlplatform.png)
+![alt text](img/CAIplatform.png)
