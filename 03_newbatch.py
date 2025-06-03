@@ -132,17 +132,6 @@ class TelcoDataGen:
         df.write.format("csv").mode('overwrite').save(self.storage + "/telco_demo/" + self.username)
 
 
-    def createDatabase(self, spark):
-        """
-        Method to create database before data generated is saved to new database and table
-        """
-
-        spark.sql("CREATE DATABASE IF NOT EXISTS {}".format(self.dbname))
-
-        print("SHOW DATABASES LIKE '{}'".format(self.dbname))
-        spark.sql("SHOW DATABASES LIKE '{}'".format(self.dbname)).show()
-
-
     def createOrAppend(self, df):
         """
         Method to create or append data to the TELCO_CELL_TOWERS table
@@ -182,9 +171,6 @@ def main():
     # Create Banking Transactions DF
     df = dg.telcoDataGen(spark)
     df = dg.addCorrelatedColumn(df)
-
-    # Create Spark Database
-    dg.createDatabase(spark)
 
     # Create Iceberg Table in Database
     dg.createOrAppend(df)
